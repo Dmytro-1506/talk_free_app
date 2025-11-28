@@ -1,0 +1,37 @@
+{
+  "name": "LevelTestResult",
+  "type": "object",
+  "properties": {
+    "language": {
+      "type": "string"
+    },
+    "level": {
+      "type": "string",
+      "enum": [
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ]
+    },
+    "score": {
+      "type": "number"
+    },
+    "total_questions": {
+      "type": "number"
+    },
+    "vocabulary_score": {
+      "type": "number"
+    },
+    "grammar_score": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "language",
+    "level",
+    "score"
+  ]
+}

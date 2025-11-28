@@ -1,0 +1,40 @@
+{
+  "name": "DialogueTopic",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Topic title"
+    },
+    "description": {
+      "type": "string",
+      "description": "Brief description of the scenario"
+    },
+    "language": {
+      "type": "string",
+      "description": "Target language for practice"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "beginner",
+        "intermediate",
+        "advanced"
+      ],
+      "default": "beginner"
+    },
+    "scenario_prompt": {
+      "type": "string",
+      "description": "AI system prompt for the conversation scenario"
+    },
+    "icon": {
+      "type": "string",
+      "description": "Icon name for the topic"
+    }
+  },
+  "required": [
+    "title",
+    "language",
+    "scenario_prompt"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "name": "DialogueSession",
+  "type": "object",
+  "properties": {
+    "topic_id": {
+      "type": "string",
+      "description": "ID of the dialogue topic"
+    },
+    "topic_title": {
+      "type": "string",
+      "description": "Title of the topic for display"
+    },
+    "language": {
+      "type": "string",
+      "description": "Language of the dialogue"
+    },
+    "prompt": {
+      "type": "string",
+      "description": "AI system prompt for the scenario"
+    },
+    "messages": {
+      "type": "array",
+      "description": "Array of conversation messages"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "completed"
+      ],
+      "default": "active"
+    }
+  },
+  "required": [
+    "topic_id",
+    "language"
+  ]
+}

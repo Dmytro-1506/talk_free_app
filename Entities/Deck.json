@@ -1,0 +1,52 @@
+{
+  "name": "Deck",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the flashcard deck"
+    },
+    "description": {
+      "type": "string",
+      "description": "Description of what this deck covers"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "language",
+        "science",
+        "history",
+        "math",
+        "technology",
+        "business",
+        "medicine",
+        "art",
+        "other"
+      ],
+      "default": "other",
+      "description": "Subject category"
+    },
+    "target_language": {
+      "type": "string",
+      "description": "The language being learned (for pronunciation)"
+    },
+    "color": {
+      "type": "string",
+      "default": "blue",
+      "description": "Deck color theme"
+    },
+    "total_cards": {
+      "type": "number",
+      "default": 0,
+      "description": "Total number of cards in deck"
+    },
+    "mastered_cards": {
+      "type": "number",
+      "default": 0,
+      "description": "Number of mastered cards"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

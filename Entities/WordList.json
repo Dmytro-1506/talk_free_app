@@ -1,0 +1,43 @@
+{
+  "name": "WordList",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Title of the word list"
+    },
+    "topic": {
+      "type": "string",
+      "description": "Topic category"
+    },
+    "level": {
+      "type": "string",
+      "enum": [
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "description": "CEFR level"
+    },
+    "language": {
+      "type": "string",
+      "description": "Target language"
+    },
+    "words": {
+      "type": "array",
+      "description": "Array of word objects with word, translation, image_url"
+    },
+    "is_standard": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "title",
+    "level",
+    "language"
+  ]
+}

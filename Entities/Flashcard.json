@@ -1,0 +1,59 @@
+{
+  "name": "Flashcard",
+  "type": "object",
+  "properties": {
+    "deck_id": {
+      "type": "string",
+      "description": "ID of the deck this card belongs to"
+    },
+    "front": {
+      "type": "string",
+      "description": "Front side of the card (question)"
+    },
+    "back": {
+      "type": "string",
+      "description": "Back side of the card (answer)"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "new",
+        "learning",
+        "review",
+        "mastered"
+      ],
+      "default": "new",
+      "description": "Current mastery level"
+    },
+    "ease_factor": {
+      "type": "number",
+      "default": 2.5,
+      "description": "Spaced repetition ease factor"
+    },
+    "interval": {
+      "type": "number",
+      "default": 0,
+      "description": "Days until next review"
+    },
+    "repetitions": {
+      "type": "number",
+      "default": 0,
+      "description": "Number of successful repetitions"
+    },
+    "next_review_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When this card should be reviewed next"
+    },
+    "last_reviewed": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Last time this card was reviewed"
+    }
+  },
+  "required": [
+    "deck_id",
+    "front",
+    "back"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "name": "UserWordProgress",
+  "type": "object",
+  "properties": {
+    "word_list_id": {
+      "type": "string",
+      "description": "ID of the word list"
+    },
+    "word": {
+      "type": "string",
+      "description": "The word being tracked"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "new",
+        "learning",
+        "mastered"
+      ],
+      "default": "new"
+    },
+    "correct_count": {
+      "type": "number",
+      "default": 0
+    },
+    "incorrect_count": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "required": [
+    "word_list_id",
+    "word"
+  ]
+}
